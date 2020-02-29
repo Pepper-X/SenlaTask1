@@ -13,8 +13,9 @@ public class Item implements Comparable<Item> {
     private double cost;
 
 
+
     @Override
     public int compareTo(Item o) {
-        return Double.compare(cost, o.cost);
+        return Double.compare(cost/weight, o.getCost()/o.getWeight());
     }
 }
